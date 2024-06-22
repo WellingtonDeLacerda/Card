@@ -1,0 +1,136 @@
+@charset 'UTF-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    text-decoration: none;
+    font-family:arial;
+}
+@font-face  {
+    font-family: 'sla';
+    src: url('../fonte/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf');
+}
+:root{
+    
+    /* ## Cores */
+
+/* ### Primário */
+
+--Ciano-escuro: hsl(158, 36%, 37%);
+--Creme: hsl(30, 38%, 92%);
+
+/* ### Neutro */
+
+--Azul-muito-escuro: hsl(212, 21%, 14%);
+--Azul-acinzentado-escuro: hsl(228, 12%, 48%);
+--Branco: hsl(0, 0%, 100%);
+
+/* ## Tamanho da fonte PARÁGRAFO 14px*/
+
+/* ### Fonte */
+}
+body{
+    background-color: var(--Creme);
+    height: 100vh;
+    width: 100vw;
+}
+p{
+    font-size: 14px;
+    color: var(--Azul-acinzentado-escuro);
+    padding-bottom: 10px ;
+}
+h1{
+    font-family:sla;
+    font-size: 1.8em;
+    font-weight: 700;
+    padding-bottom: 13px;
+}
+#h1{
+    color: var(--Ciano-escuro);
+}
+
+section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 300px;
+    max-width: 475px;
+    height: 500px;
+    transform: translate(-50%,-50%);
+    
+}
+.foto{
+    
+    background-image: url('../images/image-product-mobile.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 210px;
+    min-width: 270px;
+    max-width: 475px;
+    border-radius: 10px 10px 0px 0px;
+}
+.conteudo{
+    
+    padding: 20px;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+.conteudo a{
+    text-align: center;
+    background-color:var(--Ciano-escuro) ;
+    padding: 13px;
+    display: block;
+    color: var(--Branco);
+    border-radius: 10px;
+    transition-duration: .5s;
+}
+.conteudo a:hover{
+    background-color: var(--Azul-muito-escuro);
+}
+.container{
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+}
+.container p{ 
+    margin-left: 20px;
+    text-decoration: line-through;
+}
+i{
+    padding-right: 8px;
+    
+}
+@media screen and (min-width:768px){
+    
+    section{
+        display: flex;
+        height: 430px;
+        min-width: 650px;
+        max-width: 650px;
+        left: 55%;
+    }
+    .foto{
+       
+        background-image: url('../images/image-product-desktop.jpg');
+        height: 430px;
+        background-size: cover;
+        border-radius:10px 0px 0px 10px ;
+        
+    }
+    .conteudo{
+        border-radius: 0px 10px 10px 0px;
+        padding: 25px;
+        width: 260px;
+        
+        
+    }
+    h1{
+        font-size: 2em;
+        padding-bottom: 19px;
+        line-height: 35px;
+    }
+    p{
+        line-height: 23px;
+    }
+}
